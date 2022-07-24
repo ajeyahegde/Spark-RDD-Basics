@@ -40,7 +40,7 @@ print(business_sorted.takeOrdered(10, lambda a: -a[1]))
 endTime = time.time()
 task2Time = total+endTime-startTime
 
-list = rdd5.takeOrdered(rdd5.count(), lambda a: -a[1])
+list = business_sorted.takeOrdered(business_sorted.count(), lambda a: -a[1])
 file = open(output1_filepath, 'w')
 file.write("city,stars\n")
 for item in list:
